@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1=5;
+    int num2=10;
+    int temp;
+    
+    printf("Before swap num1 value %d\n",num1);
+    printf("Before swap num2 value %d\n",num2);
+    int *a=&num1;
+    int *b=&num2;
+    
+    temp=*a;
+    *a=*b;
+    *b=temp;
+    
+    printf("After swap num1 value %d\n",num1);
+    printf("After swap num2 value %d\n",num2);
+    
+    
+    return 0;
+}
+
+

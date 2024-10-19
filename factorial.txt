@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int factorial(int);
+
+int main() {
+  
+   int factirila_value,num;
+   scanf("%d",&num);
+   factirila_value=factorial(num) ;
+   printf("Factrorial value of %d is %d",num,factirila_value);
+   
+   return 0;
+}
+
+int factorial(int num)
+{
+    if(num==0)
+    return 1;
+    if(num==1)
+    return 1;
+    
+    return num*factorial(num-1);
+}

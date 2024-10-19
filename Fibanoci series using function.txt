@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int Fibonaci(int,int,int);
+int main()
+{
+    int num1,num2,result,value;
+    scanf("%d",&num1);
+    scanf("%d",&num2);
+    scanf("%d",&value);
+    
+    result=Fibonaci(num1,num2,value);
+    printf("Fibanoci series of number %d is %d",value,result);
+    return 0;
+}
+
+
+int Fibonaci(int num1,int num2,int value)
+{
+    int n1,n2,n3;
+     n1=num1;
+     n2=num2;
+ while(value-2)
+ {
+    n3=n1+n2;
+    n1=n2;
+    n2=n3;
+    value--;
+ }
+ return n3;
+}

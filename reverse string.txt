@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+char* reverse(char *);
+
+int main()
+{
+    char string[10];
+    scanf("%s",string);
+    
+    char *p=reverse(string);
+    
+    printf("%s\n",string);
+    printf("%s",p);
+}
+
+
+char * reverse(char * string)
+{
+    char c,i,j;
+    
+   int length=strlen(string);
+   for(i=0,j=length-1;i<j;i++,j--)
+   {
+       c=string[i];
+       string[i]=string[j];
+       string[j]=c;
+   }
+   
+   return string;
+}

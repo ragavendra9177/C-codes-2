@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct student{
+    char name[10];
+    int marks; 
+    char grade;
+}stu;
+
+int main()
+{
+    stu a[2];
+    int i;
+    for(i=0;i<2;i++)
+    {
+    scanf("%s",a[i].name);
+    scanf("%d",&a[i].marks);
+    while(getchar()!='\n');//To eliminate the new line chracater in buffer
+    scanf("%c",&a[i].grade);
+    }
+    
+     for(i=0;i<2;i++)
+    {
+    printf("%s\n",a[i].name);
+    printf("%d\n",a[i].marks);
+    printf("%c\n",a[i].grade);
+    }
+    
+}

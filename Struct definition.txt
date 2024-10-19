@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct student{
+    char *name;
+    int marks; 
+    char grade;
+}stu;
+
+int main()
+{
+    stu a={"prasad",78,'A'};
+    printf("%s\n",a.name);
+    printf("%d\n",a.marks);
+    printf("%c",a.grade);
+}

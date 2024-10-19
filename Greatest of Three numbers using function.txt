@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+ int first, second, third;
+ void Greatest_number(int,int,int);
+int main()
+{
+    int temp, temp1, temp2;
+    scanf("%d", &temp);
+    scanf("%d", &temp1);
+    scanf("%d", &temp2);
+
+   Greatest_number(temp,temp1,temp2);
+
+   
+    printf("First: %d\n", first);
+    printf("Second: %d\n", second);
+    printf("Third: %d\n", third);
+
+    return 0;
+}
+
+
+
+void Greatest_number(int temp,int temp1,int temp2)
+{
+   
+    if (temp >= temp1 && temp >= temp2) {
+        first = temp;
+        if (temp1 >= temp2) {
+            second = temp1;
+            third = temp2;
+        } else {
+            second = temp2;
+            third = temp1;
+        }
+    } else if (temp1 >= temp && temp1 >= temp2) {
+        first = temp1;
+        if (temp >= temp2) {
+            second = temp;
+            third = temp2;
+        } else {
+            second = temp2;
+            third = temp;
+        }
+    } else {
+        first = temp2;
+        if (temp >= temp1) {
+            second = temp;
+            third = temp1;
+        } else {
+            second = temp1;
+            third = temp;
+        }
+    }
+ 
+}
